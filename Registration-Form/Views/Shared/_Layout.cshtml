@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="author" content="Muhamad Nauval Azhar">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="This is a login page template based on Bootstrap 5">
+    <title>Website with Login & Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    @await RenderSectionAsync(name:"Styles", required:false)
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a asp-action="Signup" asp-controller="Signup"><button class="button" id="form-open">Signup</button></a>
+        </nav>
+    </header>
+    <section class="home">
+        <div>
+            @RenderBody()
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    @await RenderSectionAsync(name:"Scripts" , required:false)
+</body>
+</html>
